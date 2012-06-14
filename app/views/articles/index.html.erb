@@ -1,29 +1,52 @@
-<h1>Listing articles</h1>
+<div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="">BlogForDjengo</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li><a href="#">Home</a></li>
+              <li class="active"><a href="/users/articles/">Article</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
 
-<table>
-  <tr>
-    <th>Time</th>
-    <th>Category</th>
-    <th>Subject</th>
-    <th>Content</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+    <div class="container">
 
-<% @articles.each do |article| %>
-  <tr>
-    <td><%= article.time %></td>
-    <td><%= article.category %></td>
-    <td><%= article.subject %></td>
-    <td><%= article.content %></td>
-    <td><%= link_to 'Show', article %></td>
-    <td><%= link_to 'Edit', edit_article_path(article) %></td>
-    <td><%= link_to 'Destroy', article, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Article', new_article_path %>
+      <!-- Main hero unit for a primary marketing message or call to action -->
+      <div class="hero-unit">
+        <h1>Listing articles</h1>
+          <table>
+            <tr>
+              <th>Time</th>
+              <th>Category</th>
+              <th>Subject</th>
+              <th>Content</th>
+              <th></th>
+              <th></th>
+              <th></th>
+            </tr>
+          <% @articles.each do |article| %>
+            <tr>
+              <td><%= article.time %></td>
+              <td><%= article.category %></td>
+              <td><%= article.subject %></td>
+              <td><%= article.content %></td>
+              <td><%= link_to 'Show', article %></td>
+              <td><%= link_to 'Edit', edit_article_path(article) %></td>
+              <td><%= link_to 'Destroy', article, confirm: 'Are you sure?', method: :delete %></td>
+            </tr>
+          <% end %>
+          </table>
+          <br />
+          <%= link_to 'New Article', new_article_path %>
+      </div>

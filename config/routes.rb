@@ -2,7 +2,7 @@ BlogForDjengo::Application.routes.draw do
   
   devise_for :users
   
-  root :to => 'blog#index'
+  root :to => 'articles#index'
 
   resources :users
   
