@@ -1,6 +1,11 @@
 BlogForDjengo::Application.routes.draw do
+  
   devise_for :users
+  
+  root :to => 'blog#index'
 
+  resources :users
+  
   resources :articles
 
   # The priority is based upon order of creation:
@@ -52,7 +57,6 @@ BlogForDjengo::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
 
   # See how all your routes lay out with "rake routes"
 
