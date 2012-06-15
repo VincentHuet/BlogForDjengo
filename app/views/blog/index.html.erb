@@ -6,15 +6,18 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="">BlogForDjengo</a>
+          <%= link_to "BlogForDjengo", root_path, :class => "brand" %>
+          <!-- <a class="brand" href="">BlogForDjengo</a> -->
           <div class="nav-collapse">
             <ul class="nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><%= link_to 'Article', 'articles#index' %></li>
-              <li><%= link_to 'About Us', 'articles#index' %></li>
-              <li><a href="#contact">Contact</a></li>
+              <li><%= link_to "Home", root_path %></li>
+              <li><%= link_to "Article", articles_path %></li>
+              <li><%= link_to "About", aboutus_informations_path %></li>
+              <li><%= link_to "Equipe", equipe_informations_path %></li>
               <li><%= link_to "Log out", destroy_user_session_path, :method => :delete %></li>
-              <li></li>
+              <%- if controller_name != 'sessions' %>
+                <li><%= link_to "Sign in", new_user_session_path, :class => 'full-right' %></li>
+              <% end -%>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -25,12 +28,15 @@
 
       <!-- Main hero unit for a primary marketing message or call to action -->
       <div class="hero-unit">
-      	<h1>Welcome, Bonjour, </h1>
-		<p>Find me in app/views/blog/index.html.erb</p>
+      	<h1>Bonjour, </h1>
+		    <p>
+          Vous vous trouvez sur le blog de Djengo,<br /> 
+          Retrouvez y tout vos messages et le commentaires de vos amis.
 
-		<%= link_to 'Article', 'articles#index', :class => 'btn btn-primary btn-large', %>
-		<!---<%= link_to "Log out", destroy_user_session_path, :method => :delete, :class => 'btn' %>
-		 --->	
+        </p>
+
+		    <%= link_to 'Article', articles_path, :class => 'btn btn-primary btn-large', %>
+		
 		    </div>
 
       <!-- Example row of columns -->

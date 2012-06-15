@@ -3,6 +3,5 @@ class ApplicationController < ActionController::Base
   # if user_signed_in?
   	
   # end
-  before_filter :authenticate_user!
 
 end

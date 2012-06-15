@@ -1,17 +1,84 @@
-<h2>Sign in</h2>
+<div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <%= link_to "BlogForDjengo", root_path, :class => "brand" %>
+          <!-- <a class="brand" href="">BlogForDjengo</a> -->          
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li><%= link_to "Home", root_path %></li>
+              <li><%= link_to "Article", articles_path %></li>
+              <li><%= link_to "About", aboutus_informations_path %></li>
+              <li><%= link_to "Equipe", equipe_informations_path %></li>
+              <li class="active"><a href="">Sign in</a></li>              
+              <li></li>
+                <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+				  <li class='full-right'>
+				  	<%= link_to "Sign up", new_registration_path(resource_name)%>
+				  </li>
+				<% end -%>
+              <li></li>
+            </ul>
+          
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
 
-<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email %></div>
+    <div class="container">
 
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
+      <!-- Main hero unit for a primary marketing message or call to action -->
+      <div class="sign_in">
+      	<h2>Sign in</h2>
+		
+		<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+		  <div><%= f.label :email %>
+		  <%= f.email_field :email %></div>
 
-  <% if devise_mapping.rememberable? -%>
-    <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
-  <% end -%>
+		<div>
+			<%= f.label :password %>
+		  	<%= f.password_field :password %><br />
+		  	<%- if devise_mapping.recoverable? && controller_name != 'passwords' %>
+				<%= link_to "Forgot your password?", new_password_path(resource_name) %><br />
+			<% end -%>
+		</div>
 
-  <div><%= f.submit "Sign in" %></div>
-<% end %>
+		  <% if devise_mapping.rememberable? -%>
+		    <div><%= f.check_box :remember_me %> Remember me</div>
+		  <% end -%>
 
-<%= render :partial => "devise/shared/links" %>
+		  <div><%= f.submit "Sign in" %></div>
+		<% end %>
+
+		<!-- <%= render :partial => "devise/shared/links" %> -->
+	</div>
+    <!-- end_of:Main hero unit for a primary marketing message or call to action -->
+      
+  <!-- Example row of columns -->
+  <!--  <div class="row">
+    <div class="span4">
+      <h2>Heading</h2>
+       <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+      <p><a class="btn" href="#">View details &raquo;</a></p>
+    </div>
+    <div class="span4">
+      <h2>Heading</h2>
+       <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+      <p><a class="btn" href="#">View details &raquo;</a></p>
+   </div>
+    <div class="span4">
+      <h2>Heading</h2>
+      <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+      <p><a class="btn" href="#">View details &raquo;</a></p>
+    </div>
+  </div> -->
+  <hr>
+  <footer>
+    <p>&copy; Djengo 2012</p>
+  </footer>
+
+</div> <!-- /container -->
