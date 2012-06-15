@@ -4939,7 +4939,11 @@ a.badge:hover {
   color: #ffffff;
 }
 
-.hero-unit {
+.hero-unit-small-paragraph {
+  font-size: 10px;
+}
+
+/*.hero-unit {
   padding: 60px;
   margin-bottom: 30px;
   background-color: #eeeeee;
@@ -4950,18 +4954,18 @@ a.badge:hover {
 
 .hero-unit h1 {
   margin-bottom: 0;
-  font-size: 60px;
+  font-size: 18px;
   line-height: 1;
   letter-spacing: -1px;
   color: inherit;
 }
 
 .hero-unit p {
-  font-size: 18px;
+  font-size: 10px;
   font-weight: 200;
   line-height: 27px;
   color: inherit;
-}
+}*/
 
 .pull-right {
   float: right;

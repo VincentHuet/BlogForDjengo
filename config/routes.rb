@@ -8,6 +8,14 @@ BlogForDjengo::Application.routes.draw do
   
   resources :articles
 
+  resources :informations, :only => [] do
+    collection do
+      get 'aboutus'
+      get 'equipe'
+      get 'aboutus_more'
+    end
+  end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
