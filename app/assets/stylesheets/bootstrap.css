@@ -25,7 +25,7 @@ section {
 
 footer {
   float: right;
-  margin-right: 20%;
+  margin-right: 30%;
 }
 
 audio,
@@ -4973,6 +4973,9 @@ a.badge:hover {
   line-height: 27px;
   color: inherit;
 }
+.hero-unit td, th {
+  width: 200px;
+}
 
 .sign_in {
   padding: 60px;
@@ -4987,9 +4990,9 @@ a.badge:hover {
 }
 
 .full-right {
-  margin-left: 300px;
+  float: right;
+  margin-right: 50px;
   right: 0;
-
 }
 
 .pull-right {
