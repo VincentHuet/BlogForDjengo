@@ -11,7 +11,6 @@
  */
 
 article,
-aside,
 details,
 figcaption,
 figure,
@@ -235,6 +234,18 @@ a:hover {
 .span6 {
   width: 460px;
 }
+
+.height6 {
+  height: 90px;
+}
+/*
+.span6-centrage {
+  width: 460px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  /*text-align: center;
+}*/
 
 .span5 {
   width: 380px;
@@ -4950,14 +4961,24 @@ a.badge:hover {
   font-size: 10px;
 }
 
-.hero-unit {
-  padding: 60px;
-  margin-bottom: 30px;
-  background-color: #eeeeee;
+.hero-unit,
+.hero-unit-span8 {
+  padding: 20px;
+  padding-top: 60px;
+  margin-bottom: 5px;
+  background-color: #DDD;
+  margin-left: auto;
+  margin-right: auto;
   -webkit-border-radius: 6px;
      -moz-border-radius: 6px;
           border-radius: 6px;
 }
+
+
+.hero-unit-span8 {
+  width: 620px;
+}
+
 
 .hero-unit h1 {
   margin-bottom: 0;
@@ -4970,7 +4991,7 @@ a.badge:hover {
 .hero-unit p {
   font-size: 10px;
   font-weight: 200;
-  line-height: 27px;
+  line-height: 17px;
   color: inherit;
 }
 .hero-unit td, th {
