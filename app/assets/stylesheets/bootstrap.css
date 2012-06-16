@@ -181,7 +181,7 @@ a:hover {
 }
 
 .row {
-  margin-left: -20px;
+  margin-left: 0px;
   *zoom: 1;
 }
 
@@ -205,6 +205,14 @@ a:hover {
 .navbar-fixed-bottom .container {
   width: 940px;
 
+}
+
+.border-right{
+  border-right: 1px solid #999;
+}
+
+.border-top-perso{
+  border-top: 1px solid #999;
 }
 
 .span12 {
@@ -238,14 +246,6 @@ a:hover {
 .height6 {
   height: 90px;
 }
-/*
-.span6-centrage {
-  width: 460px;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  /*text-align: center;
-}*/
 
 .span5 {
   width: 380px;
@@ -253,6 +253,7 @@ a:hover {
 
 .span4 {
   width: 300px;
+  float: left;
 }
 
 .span3 {
@@ -4966,9 +4967,9 @@ a.badge:hover {
   padding: 20px;
   padding-top: 60px;
   margin-bottom: 5px;
+  margin-left: 5%;
+  margin-right: 5%;
   background-color: #DDD;
-  margin-left: auto;
-  margin-right: auto;
   -webkit-border-radius: 6px;
      -moz-border-radius: 6px;
           border-radius: 6px;
@@ -4977,6 +4978,8 @@ a.badge:hover {
 
 .hero-unit-span8 {
   width: 620px;
+  margin-left: 10%;
+  margin-right: auto;
 }
 
 

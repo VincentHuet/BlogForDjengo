@@ -1,90 +1,45 @@
-<div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-          <%= link_to "BlogForDjengo", root_path, :class => "brand" %>
-          <!-- <a class="brand" href="">BlogForDjengo</a> -->
-          <div class="nav-collapse">
-            <ul class="nav">
-              <li><%= link_to "Home", root_path %></li>
-              <li><%= link_to "Article", articles_path %></li>
-              <li><%= link_to "About", aboutus_informations_path %></li>
-              <li><%= link_to "Equipe", equipe_informations_path %></li>
-              <li><%= link_to "Log out", destroy_user_session_path, :method => :delete %></li>
-              <li></li>
-            </ul>
-          </div><!--/.nav-collapse -->
-        </div>
-      </div>
-    </div>
 
-    <div class="container">
+<div class="container">
 
-      <!-- Main hero unit for a primary marketing message or call to action -->
-      <div class="hero-unit">
-      	<h1>A propos de djengo</h1><br />
-			<p>Djengo, c&rsquo;est l&rsquo;histoire de 4 jeunes dipl&ocirc;m&eacute;s entrepreneurs qui pensent encore pouvoir changer le monde. R&ecirc;ve ou r&eacute;alit&eacute; ?</p>
-			<p>Il s&rsquo;agit d&rsquo;une start-up web innovante favorisant le covoiturage pour les petites et moyennes distances. Gr&acirc;ce &agrave; djengo, vous pouvez d&eacute;sormais r&eacute;server votre trajet en quelques secondes.</p>
-			<p>Avant d&rsquo;aller plus loin, il est amusant de s&rsquo;interroger sur la signification de &ldquo;djengo&rdquo;. Est-ce par assimilation au pr&eacute;nom de Django Reinhardt, virtuose et tsigane, et aux gens du voyage ? Ce nom nous est venu &agrave; l&rsquo;esprit sans id&eacute;e pr&eacute;con&ccedil;ue et nous ne pouvons plus nous en passer. D&rsquo;ailleurs, si vous avez l&rsquo;id&eacute;e d&rsquo;une explication rationnelle au nom qui pourrait justifier ce choix, communiquez l&agrave; : vous pourriez gagner le badge &ldquo;cr&eacute;atif&rdquo;</p>
-			<p>Revenons &agrave; notre histoire. Il y a quelques mois, comme &agrave; son habitude, Guillaume faisait de l&rsquo;autostop le long de la route. Par malchance ce jour-l&agrave;, personne ne s&rsquo;arr&ecirc;ta pour le charger, et cela malgr&eacute; un nombre inimaginable de voitures, vides de passager.</p>
-			<p>Quelque chose devait changer.</p>
-			<p>Il communiqua ses r&eacute;flexions &agrave; Anissia (l&rsquo;&eacute;l&eacute;ment f&eacute;minin !) qui pensa comme Guillaume que cette id&eacute;e pr&eacute;sentait un important potentiel.</p>
-			<p>Ayant convaincu 3 informaticiens, ils form&egrave;rent une premi&egrave;re &ldquo;dream team&rdquo;. L&rsquo;embryon du projet djengo venait de na&icirc;tre.</p>
-			<p>Quelques semaines plus tard, en avril 2011, djengo s&rsquo;inscrit &agrave; la &ldquo;Founder Institute&rdquo; un acc&eacute;l&eacute;rateur de projet aidant les entrepreneurs &agrave; lancer des start-ups technologiques. Une des obligations pour r&eacute;ussir le programme est de constituer la soci&eacute;t&eacute;. Le temps &eacute;tait compt&eacute;. En effet, ils avaient 3 semaines pour constituer la soci&eacute;t&eacute;&hellip;</p>
-			<p>Mais l&rsquo;&eacute;quipe qu&rsquo;ils avaient form&eacute;e n&rsquo;&eacute;tait pas si idyllique. En effet, les 3 informaticiens n&rsquo;&eacute;taient pas pr&ecirc;ts pour la grande aventure.</p>
-			<p>Il fallait d&egrave;s lors trouver de v&eacute;ritables informaticiens entrepreneurs pouvant travailler 80 heures par semaine sur djengo, retourner vivre chez leurs parents, et ne pas percevoir de salaires pendant plusieurs mois.</p>
-			<p>Anissia et Guillaume ne perdirent pas confiance. En effet, ils &eacute;taient toujours convaincus de la puissance de la valeur de leur projet et formaient une &eacute;quipe fort compl&eacute;mentaire. Si Anissia se distingue par son c&ocirc;t&eacute; pragmatique et direct, Guillaume, quant &agrave; lui, puise sa force dans sa vision du projet.</p>
-			<p>Il ne leur restait que quelques jours pour former une &eacute;quipe et trouver deux informaticiens entrepreneurs pr&ecirc;ts &agrave; participer &agrave; la cr&eacute;ation d&rsquo;une soci&eacute;t&eacute; innovante.</p>
-			<p>Et le miracle se produisit.</p>
-			<p>Apr&egrave;s une recherche acharn&eacute;e notamment sur le campus universitaire de Louvain-La-Neuve en Belgique, le nom de &ldquo;Tanguy Goretti&rdquo; se pr&eacute;senta plusieurs fois. Anissia le contacta directement.</p>
-			<p>Tanguy &eacute;tait alors &agrave; San Francisco, pour y pr&eacute;senter son m&eacute;moire de fin d&rsquo;&eacute;tudes, visiter le grand Google et jouer au casino lorsqu&rsquo;il re&ccedil;ut le premier appel d&rsquo;Anissia. Tanguy l&rsquo;informa directement qu&rsquo;il avait l&rsquo;habitude de travailler avec son partenaire David. C&rsquo;&eacute;tait parfait.Finalement, Djengo r&eacute;ussit donc &agrave; faire monter &agrave; bord deux des plus brillants jeunes entrepreneurs informaticiens du royaume de Belgique. Vous ne nous croyez pas ? Combien de d&eacute;veloppeurs &ldquo;Ruby on Rails&rdquo;(langage de programmation) connaissez-vous ? Cherchez bien, ils sont rares !</p>
-			<p>L&rsquo;enthousiasme, la soif d&rsquo;aventure et le bon feeling furent suffisants pour se lancer dans la cr&eacute;ation de Djengo en moins de 3 semaines. On &eacute;tait en mai 2011.</p>
-			<p>L&rsquo;id&eacute;e de base du projet &eacute;tait simple : optimiser chaque &laquo; espace mobile &raquo; existant.</p>
-			<p>Aujourd&rsquo;hui gr&acirc;ce &agrave; la r&eacute;volution internet, nous nous dirigeons vers une soci&eacute;t&eacute; de consommation collaborative : chacun partage, communique ou &eacute;change avec d&rsquo;autres. Tandis que Couch-surfing permet &agrave; chacun d&rsquo;offrir son canap&eacute; pour une nuit &agrave; un voyageur, Airbnb offre la possibilit&eacute; de louer sa propre chambre. BuzzCar quant &agrave; lui permet aux gens de mettre en location leur voiture lorsque celle-ci est inutilis&eacute;e.</p>
-			<p>De plus, l&rsquo;&eacute;tat de la mobilit&eacute; et celui de l&rsquo;&eacute;cologie sont d&eacute;sastreux. Plus de 80% des d&eacute;placements s&rsquo;effectuent en voiture et le taux de remplissage de celles-ci n&rsquo;est que de 1,4 occupants par v&eacute;hicule. Un conducteur moyen &eacute;met 4 tonnes de CO2 par an. En comparaison avec un vache qui &eacute;met environ 2 tonnes par an, on peut facilement conclure qu&rsquo;un conducteur pollue 2 fois plus qu&rsquo;une vache. Et comme il y a 3 fois plus de conducteurs que de vaches&hellip; !</p>
-			<p>Une solution &agrave; ces probl&eacute;matiques est le covoiturage.</p>
-			<p>Mais le terme &ldquo;covoiturage&rdquo; &agrave; lui seul est vieillot et n&rsquo;a jamais attir&eacute; les foules. Djengo pr&eacute;sente alors un ensemble de solutions pour rendre le covoiturage &ldquo;fun&rdquo;.</p>
-			<p>Premi&egrave;rement, djengo est le &laquo; doodle &raquo; du covoiturage.</p>
-			<p>Tout individu peut librement, gratuitement et rapidement cr&eacute;er un &eacute;v&eacute;nement sur djengo. La cr&eacute;ation d&rsquo;un &eacute;v&eacute;nement doit en corollaire faciliter l&rsquo;organisation du covoiturage pour acc&eacute;der &agrave; cet &eacute;v&eacute;nement et en revenir. Il s&rsquo;agit donc en quelque sorte d&rsquo;un &ldquo;doodle&rdquo; du covoiturage: le syst&egrave;me g&eacute;n&egrave;re un lien pouvant &ecirc;tre communiqu&eacute; facilement par le cr&eacute;ateur de l&rsquo;&eacute;v&eacute;nement.</p>
-			<p>Deuxi&egrave;mement, djengo est le r&eacute;seau social de la mobilit&eacute;.</p>
-			<p>Djengo se veut &ecirc;tre un v&eacute;ritable r&eacute;seau social et int&egrave;gre dans le profil de l&rsquo;utilisateur &ndash; &agrave; son enti&egrave;re discr&eacute;tion &ndash;les informations pr&eacute;sentes sur ses r&eacute;seaux sociaux. Il sera d&egrave;s lors possible pour celui-ci de constater, par exemple, qu&rsquo;il a 3 amis en commun sur Facebook avec un potentiel covoitureur propos&eacute; par djengo.</p>
-			<p>Finalement, la confiance est bas&eacute;e sur un syst&egrave;me d&rsquo;&eacute;valuation fiable.</p>
-			<p>Djengo invite l&rsquo;utilisateur &agrave; donner une notation &agrave; la personne avec laquelle il a covoitur&eacute; &agrave; l&rsquo;issue du trajet commun.</p>
-			<p>Cette notation sera r&eacute;alis&eacute;e &agrave; l&rsquo;aide de badges ludiques (badge &ldquo;sympa&rdquo;, &ldquo;dr&ocirc;le&rdquo;, &ldquo;bob&rdquo; mais &eacute;galement badge &ldquo;en retard&rdquo;,&ldquo;annul&eacute; en derni&egrave;re minute&rdquo;,&ldquo;jamais venu&rdquo;, &ldquo;pas agr&eacute;able&rdquo;).</p>
-			<p>Mais ce qui pr&eacute;c&egrave;de est bien joli et th&eacute;orique ! Maintenant il temps pour nous de passer &agrave; l&rsquo;action et de tester l&rsquo;outil sur le terrain. Nous vous remercions d&eacute;j&agrave; d&rsquo;avoir visit&eacute; notre site. N&rsquo;h&eacute;sitez pas &agrave; nous envoyer des feedback et commentaires sur twitter, facebook ou par email. </p>
-			<p>
-				<strong>Anissia, Tanguy, Guillaume &amp; David </strong>
-			</p>
-			   </div>
+  <!-- Main hero unit for a primary marketing message or call to action -->
+  <div class="hero-unit">
+  	<h1>A propos de djengo</h1><br />
+	<p>Djengo, c&rsquo;est l&rsquo;histoire de 4 jeunes dipl&ocirc;m&eacute;s entrepreneurs qui pensent encore pouvoir changer le monde. R&ecirc;ve ou r&eacute;alit&eacute; ?</p>
+	<p>Il s&rsquo;agit d&rsquo;une start-up web innovante favorisant le covoiturage pour les petites et moyennes distances. Gr&acirc;ce &agrave; djengo, vous pouvez d&eacute;sormais r&eacute;server votre trajet en quelques secondes.</p>
+	<p>Avant d&rsquo;aller plus loin, il est amusant de s&rsquo;interroger sur la signification de &ldquo;djengo&rdquo;. Est-ce par assimilation au pr&eacute;nom de Django Reinhardt, virtuose et tsigane, et aux gens du voyage ? Ce nom nous est venu &agrave; l&rsquo;esprit sans id&eacute;e pr&eacute;con&ccedil;ue et nous ne pouvons plus nous en passer. D&rsquo;ailleurs, si vous avez l&rsquo;id&eacute;e d&rsquo;une explication rationnelle au nom qui pourrait justifier ce choix, communiquez l&agrave; : vous pourriez gagner le badge &ldquo;cr&eacute;atif&rdquo;</p>
+	<p>Revenons &agrave; notre histoire. Il y a quelques mois, comme &agrave; son habitude, Guillaume faisait de l&rsquo;autostop le long de la route. Par malchance ce jour-l&agrave;, personne ne s&rsquo;arr&ecirc;ta pour le charger, et cela malgr&eacute; un nombre inimaginable de voitures, vides de passager.</p>
+	<p>Quelque chose devait changer.</p>
+	<p>Il communiqua ses r&eacute;flexions &agrave; Anissia (l&rsquo;&eacute;l&eacute;ment f&eacute;minin !) qui pensa comme Guillaume que cette id&eacute;e pr&eacute;sentait un important potentiel.</p>
+	<p>Ayant convaincu 3 informaticiens, ils form&egrave;rent une premi&egrave;re &ldquo;dream team&rdquo;. L&rsquo;embryon du projet djengo venait de na&icirc;tre.</p>
+	<p>Quelques semaines plus tard, en avril 2011, djengo s&rsquo;inscrit &agrave; la &ldquo;Founder Institute&rdquo; un acc&eacute;l&eacute;rateur de projet aidant les entrepreneurs &agrave; lancer des start-ups technologiques. Une des obligations pour r&eacute;ussir le programme est de constituer la soci&eacute;t&eacute;. Le temps &eacute;tait compt&eacute;. En effet, ils avaient 3 semaines pour constituer la soci&eacute;t&eacute;&hellip;</p>
+	<p>Mais l&rsquo;&eacute;quipe qu&rsquo;ils avaient form&eacute;e n&rsquo;&eacute;tait pas si idyllique. En effet, les 3 informaticiens n&rsquo;&eacute;taient pas pr&ecirc;ts pour la grande aventure.</p>
+	<p>Il fallait d&egrave;s lors trouver de v&eacute;ritables informaticiens entrepreneurs pouvant travailler 80 heures par semaine sur djengo, retourner vivre chez leurs parents, et ne pas percevoir de salaires pendant plusieurs mois.</p>
+	<p>Anissia et Guillaume ne perdirent pas confiance. En effet, ils &eacute;taient toujours convaincus de la puissance de la valeur de leur projet et formaient une &eacute;quipe fort compl&eacute;mentaire. Si Anissia se distingue par son c&ocirc;t&eacute; pragmatique et direct, Guillaume, quant &agrave; lui, puise sa force dans sa vision du projet.</p>
+	<p>Il ne leur restait que quelques jours pour former une &eacute;quipe et trouver deux informaticiens entrepreneurs pr&ecirc;ts &agrave; participer &agrave; la cr&eacute;ation d&rsquo;une soci&eacute;t&eacute; innovante.</p>
+	<p>Et le miracle se produisit.</p>
+	<p>Apr&egrave;s une recherche acharn&eacute;e notamment sur le campus universitaire de Louvain-La-Neuve en Belgique, le nom de &ldquo;Tanguy Goretti&rdquo; se pr&eacute;senta plusieurs fois. Anissia le contacta directement.</p>
+	<p>Tanguy &eacute;tait alors &agrave; San Francisco, pour y pr&eacute;senter son m&eacute;moire de fin d&rsquo;&eacute;tudes, visiter le grand Google et jouer au casino lorsqu&rsquo;il re&ccedil;ut le premier appel d&rsquo;Anissia. Tanguy l&rsquo;informa directement qu&rsquo;il avait l&rsquo;habitude de travailler avec son partenaire David. C&rsquo;&eacute;tait parfait.Finalement, Djengo r&eacute;ussit donc &agrave; faire monter &agrave; bord deux des plus brillants jeunes entrepreneurs informaticiens du royaume de Belgique. Vous ne nous croyez pas ? Combien de d&eacute;veloppeurs &ldquo;Ruby on Rails&rdquo;(langage de programmation) connaissez-vous ? Cherchez bien, ils sont rares !</p>
+	<p>L&rsquo;enthousiasme, la soif d&rsquo;aventure et le bon feeling furent suffisants pour se lancer dans la cr&eacute;ation de Djengo en moins de 3 semaines. On &eacute;tait en mai 2011.</p>
+	<p>L&rsquo;id&eacute;e de base du projet &eacute;tait simple : optimiser chaque &laquo; espace mobile &raquo; existant.</p>
+	<p>Aujourd&rsquo;hui gr&acirc;ce &agrave; la r&eacute;volution internet, nous nous dirigeons vers une soci&eacute;t&eacute; de consommation collaborative : chacun partage, communique ou &eacute;change avec d&rsquo;autres. Tandis que Couch-surfing permet &agrave; chacun d&rsquo;offrir son canap&eacute; pour une nuit &agrave; un voyageur, Airbnb offre la possibilit&eacute; de louer sa propre chambre. BuzzCar quant &agrave; lui permet aux gens de mettre en location leur voiture lorsque celle-ci est inutilis&eacute;e.</p>
+	<p>De plus, l&rsquo;&eacute;tat de la mobilit&eacute; et celui de l&rsquo;&eacute;cologie sont d&eacute;sastreux. Plus de 80% des d&eacute;placements s&rsquo;effectuent en voiture et le taux de remplissage de celles-ci n&rsquo;est que de 1,4 occupants par v&eacute;hicule. Un conducteur moyen &eacute;met 4 tonnes de CO2 par an. En comparaison avec un vache qui &eacute;met environ 2 tonnes par an, on peut facilement conclure qu&rsquo;un conducteur pollue 2 fois plus qu&rsquo;une vache. Et comme il y a 3 fois plus de conducteurs que de vaches&hellip; !</p>
+	<p>Une solution &agrave; ces probl&eacute;matiques est le covoiturage.</p>
+	<p>Mais le terme &ldquo;covoiturage&rdquo; &agrave; lui seul est vieillot et n&rsquo;a jamais attir&eacute; les foules. Djengo pr&eacute;sente alors un ensemble de solutions pour rendre le covoiturage &ldquo;fun&rdquo;.</p>
+	<p>Premi&egrave;rement, djengo est le &laquo; doodle &raquo; du covoiturage.</p>
+	<p>Tout individu peut librement, gratuitement et rapidement cr&eacute;er un &eacute;v&eacute;nement sur djengo. La cr&eacute;ation d&rsquo;un &eacute;v&eacute;nement doit en corollaire faciliter l&rsquo;organisation du covoiturage pour acc&eacute;der &agrave; cet &eacute;v&eacute;nement et en revenir. Il s&rsquo;agit donc en quelque sorte d&rsquo;un &ldquo;doodle&rdquo; du covoiturage: le syst&egrave;me g&eacute;n&egrave;re un lien pouvant &ecirc;tre communiqu&eacute; facilement par le cr&eacute;ateur de l&rsquo;&eacute;v&eacute;nement.</p>
+	<p>Deuxi&egrave;mement, djengo est le r&eacute;seau social de la mobilit&eacute;.</p>
+	<p>Djengo se veut &ecirc;tre un v&eacute;ritable r&eacute;seau social et int&egrave;gre dans le profil de l&rsquo;utilisateur &ndash; &agrave; son enti&egrave;re discr&eacute;tion &ndash;les informations pr&eacute;sentes sur ses r&eacute;seaux sociaux. Il sera d&egrave;s lors possible pour celui-ci de constater, par exemple, qu&rsquo;il a 3 amis en commun sur Facebook avec un potentiel covoitureur propos&eacute; par djengo.</p>
+	<p>Finalement, la confiance est bas&eacute;e sur un syst&egrave;me d&rsquo;&eacute;valuation fiable.</p>
+	<p>Djengo invite l&rsquo;utilisateur &agrave; donner une notation &agrave; la personne avec laquelle il a covoitur&eacute; &agrave; l&rsquo;issue du trajet commun.</p>
+	<p>Cette notation sera r&eacute;alis&eacute;e &agrave; l&rsquo;aide de badges ludiques (badge &ldquo;sympa&rdquo;, &ldquo;dr&ocirc;le&rdquo;, &ldquo;bob&rdquo; mais &eacute;galement badge &ldquo;en retard&rdquo;,&ldquo;annul&eacute; en derni&egrave;re minute&rdquo;,&ldquo;jamais venu&rdquo;, &ldquo;pas agr&eacute;able&rdquo;).</p>
+	<p>Mais ce qui pr&eacute;c&egrave;de est bien joli et th&eacute;orique ! Maintenant il temps pour nous de passer &agrave; l&rsquo;action et de tester l&rsquo;outil sur le terrain. Nous vous remercions d&eacute;j&agrave; d&rsquo;avoir visit&eacute; notre site. N&rsquo;h&eacute;sitez pas &agrave; nous envoyer des feedback et commentaires sur twitter, facebook ou par email. </p>
+	<p>
+		<strong>Anissia, Tanguy, Guillaume &amp; David </strong>
+	</p>
+	   </div>
+  <hr>
+</div> <!-- /container -->
 
-      <!-- Example row of columns -->
-     <!--  <div class="row">
-        <div class="span4">
-          <h2>Heading</h2>
-           <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
-        </div>
-        <div class="span4">
-          <h2>Heading</h2>
-           <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
-       </div>
-        <div class="span4">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
-        </div>
-      </div> -->
-
-      <hr>
-
-      <footer>
-        <p>&copy; Djengo 2012</p>
-      </footer>
-
-    </div> <!-- /container -->
-
+<footer>
+  <p>&copy; Djengo 2012</p>
+</footer>
