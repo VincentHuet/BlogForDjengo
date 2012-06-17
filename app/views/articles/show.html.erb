@@ -3,34 +3,38 @@
 	    <div class="hero-unit-large">
 	    	<p id="notice"><%= notice %></p>
 
-			<p>
-        <span><b>Subject:</b><%= @article.subject %></span>
-			</p>
-			<p><b>Category:</b> <%= @article.category %>
-			</p>
-      <hr>
-			<p>
-			  <b>Content:</b> <%= @article.content %>
-			</p>
-      <p>
-      <span class="full-right"><b>Time:</b><%= @article.time %></span>
-      </p>
-      <hr>
-      <br />
-      <% if current_user.id == @article.user_id %>
-        <p> 
-          <%= link_to 'Back', articles_path, :class => 'btn' %>
-          
-          <span class='full-right'>
-            <%= link_to 'Edit', edit_article_path(@article), :class => 'btn  btn-primary'%>
-            <%= link_to 'Destroy', @article,  :class => 'btn btn-warning', confirm: 'Are you sure?', method: :delete %>
-          </span>
+  			<p>
+          <span><b>Subject:</b><%= @article.subject %></span>
+  			</p>
+  			<p><b>Category:</b> <%= @article.category %>
+  			</p>
+        <hr>
+  			<p>
+  			  <b>Content:</b> <%= @article.content %>
+  			</p>
+        <p>
+        <span class="full-right"><b>Time:</b><%= @article.time %></span>
         </p>
-      <% else %>
-        <p> 
-            <%= link_to 'Back', articles_path, :class => 'btn btn-primary' %>
-        </p>
-      <% end %>
+        <hr>
+        <br />
+        <% if current_user.id == @article.user_id %>
+          <p> 
+            <%= link_to 'Back', articles_path, :class => 'btn' %>
+            
+            <span class='full-right'>
+              <%= link_to 'Comment', '#', :class => 'btn' %>
+              <%= link_to 'Edit', edit_article_path(@article), :class => 'btn  btn-primary'%>
+              <%= link_to 'Destroy', @article,  :class => 'btn btn-warning', confirm: 'Are you sure?', method: :delete %>
+            </span>
+          </p>
+        <% else %>
+          <p> 
+              <%= link_to 'Back', articles_path, :class => 'btn btn-primary' %>
+              <span class='full-right'>
+                 <%= link_to 'Comment', '', :class => 'btn' %>
+              </span>
+          </p>
+        <% end %>
 		</div>
     	<!-- end_of:Main hero unit for a primary marketing message or call to action -->
   <hr>

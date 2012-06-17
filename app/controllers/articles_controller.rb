@@ -46,6 +46,7 @@ class ArticlesController < ApplicationController
   # POST /articles.json
   def create
     @article = Article.new(params[:article])
+    
 
     respond_to do |format|
       if @article.save

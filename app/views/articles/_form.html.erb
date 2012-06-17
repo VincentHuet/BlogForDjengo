@@ -10,7 +10,6 @@
       </ul>
     </div>
   <% end %>
-
   <div class="field">
     <%= f.label :subject, unique: true %>
     <%= f.text_field :subject %>
@@ -20,6 +19,13 @@
   </div>
   <div class="field">
     <%= f.label :category %>
+    <!-- <input type="text" name="category" id="category" liste="category">
+    <datalist id="category">
+      <% @article_array = Article.all %>   
+      <% @article_array.each do |article| %>
+        <option value="<%= article.category %>">
+      <% end %>
+    </datalist> -->
     <%= f.text_field :category %>
   </div>
   <div class="field">
