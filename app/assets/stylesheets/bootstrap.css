@@ -253,7 +253,6 @@ a:hover {
 
 .span4 {
   width: 300px;
-  float: left;
 }
 
 .span3 {
@@ -2591,6 +2590,10 @@ button.close {
   background: transparent;
   border: 0;
   -webkit-appearance: none;
+}
+
+.colored-white{
+  color: #ffffff;
 }
 
 .btn {
@@ -4975,6 +4978,16 @@ a.badge:hover {
           border-radius: 6px;
 }
 
+.hero-unit-bottom{
+  padding: 20px;
+  margin-bottom: 5px;
+  margin-left: 5%;
+  margin-right: 5%;
+  background-color: #DDD;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+}
 
 .hero-unit-span8 {
   width: 620px;
@@ -4982,8 +4995,39 @@ a.badge:hover {
   margin-right: auto;
 }
 
+.hero-unit-large {
+  font-size: 16px;
+
+  line-height: 30px;
+  padding: 20px;
+  padding-top: 60px;
+  margin-bottom: 5px;
+  width: 620px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #DDD;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+}
+
+.hero-unit-large p {
+  font-size: 12px;
+}
+
+.hero-unit-large span {
+  font-size: 14px;
+}
 
 .hero-unit h1 {
+  margin-bottom: 0;
+  font-size: 28px;
+  line-height: 1;
+  letter-spacing: -1px;
+  color: inherit;
+}
+
+.hero-unit h2 {
   margin-bottom: 0;
   font-size: 18px;
   line-height: 1;

@@ -1,7 +1,7 @@
 <div class="container">
     <!-- Main hero unit for a primary marketing message or call to action -->
     <div class="hero-unit-span8">
-      <h1>Listing users</h1>
+      <h1>Listing articles</h1>
       <hr>
         <table>
           <tr>
@@ -15,15 +15,14 @@
             <td class="span6"><%= link_to user.id, user %></td>
             <td class="span6"><%= link_to user.email, user %></td>
             <td class="span5"><%= link_to user.password, user %></td>
+            <!-- <td class="span5">&nbsp;<%= link_to 'Show', article %></td> -->
+            <!-- <td><%= link_to 'Edit', edit_article_path(article), :class => 'btn btn-primary btn-large'%></td>
+            <td><%= link_to 'Destroy', article, confirm: 'Are you sure?', method: :delete, :class => 'btn'  %> -->
           </tr>
         <% end %>
         </table>
         <hr>
-        <hr>
-        <a href=""><%= current_user.id %></a>
-        <hr>
-        <hr>
-          <%= link_to 'New Article', new_user_registration_path, :class => 'btn full-right' %>
+          <%= link_to 'New Article', new_article_path, :class => 'btn full-right' %>
         <br />
         
     </div>

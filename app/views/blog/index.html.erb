@@ -2,14 +2,20 @@
 
   <!-- Main hero unit for a primary marketing message or call to action -->
   <div class="hero-unit">
-  	<h1>Bonjour, </h1>
-    <p>
-      Vous vous trouvez sur le blog de Djengo,<br /> 
-      Retrouvez y tout vos messages et le commentaires de vos amis.
-    </p>
+  	<div class="box-float">
+      <h1>Bonjour, </h1>
+      <p>
+        Vous vous trouvez sur le blog de Djengo,<br /> 
+        Retrouvez y tout vos messages et le commentaires de vos amis.
+      </p>
+    </div>
     
-    <%= link_to 'Article', articles_path, :class => 'btn btn-primary btn-large', %>
-      
+    <div class="box-float">
+      <%= image_tag("screen-shot.png") %>
+    </div>
+    <hr>
+    <%= link_to 'Article', articles_path, :class => 'btn btn-large full-right', %>
+      <br /><br />
   </div>
   <hr>
 </div> <!-- /container -->
