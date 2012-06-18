@@ -1,5 +1,7 @@
 BlogForDjengo::Application.routes.draw do
   
+  resources :comments
+
   devise_for :users
   
   root :to => 'blog#index'
@@ -16,6 +18,9 @@ BlogForDjengo::Application.routes.draw do
     end
   end
 
+  resources :articles do
+    resources :comments
+  end
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

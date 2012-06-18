@@ -1,0 +1,39 @@
+<div class="container">
+    <!-- Main hero unit for a primary marketing message or call to action -->
+    <div class="hero-unit-span8">
+      <h1>Listing comments</h1>
+
+      <table>
+        <tr>
+          <th>Content</th>
+          <th>Time</th>
+          <th>Article</th>
+          <th>User</th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+      <% @comments.each do |comment| %>
+        <tr>
+          <td class="center"><%= comment.content %></td>
+          <td class="center"><%= comment.time %></td>
+          <td class="center"><%= comment.article_id %></td>
+          <td class="center"><%= comment.user_id %></td>
+          <td class="center"><%= link_to 'Show', comment %></td>
+          <td class="center"><%= link_to 'Edit', edit_comment_path(comment) %></td>
+          <td class="center"><%= link_to 'Destroy', comment, confirm: 'Are you sure?', method: :delete %></td>
+        </tr>
+      <% end %>
+      </table>
+
+      <br />
+
+      <%= link_to 'New Comment', new_comment_path %>
+  
+    </div>
+    <!-- end_of:Main hero unit for a primary marketing message or call to action -->
+  <hr>
+</div> <!-- /container -->
+<footer>
+    <p>&copy; Djengo 2012</p>
+</footer>
