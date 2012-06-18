@@ -1,0 +1,43 @@
+.container
+  / Main hero unit for a primary marketing message or call to action
+  .hero-unit
+    %p#notice= notice
+    %p
+      %span
+        %b.gras Subject:
+        = @article.subject
+      - if current_user.id == @article.user_id
+        %span.full-right
+          = link_to 'Edit', edit_article_path(@article), :class => 'btn  btn-primary'
+          = link_to 'Destroy', @article,  :class => 'btn btn-warning', confirm: 'Are you sure?', method: :delete
+    %p
+      %b.gras From:
+      = User.find(@article.user_id).email
+    %p
+      %b.gras Category:
+      = @article.category
+    %hr
+      %p
+        %b.gras Content:
+        = @article.content
+      %p
+        %span.full-right
+          %b.gras Time:
+          = @article.time
+      %hr
+        %div
+          - @article_array.each do |comment|
+            - if comment.article_id == @article.id
+              %p
+                %b.gras.gras2= User.find(comment.user_id).email
+                \ : #{comment.content}
+        %hr
+          %p
+            = link_to 'Back', articles_path, :class => 'btn btn-primary'
+            %span.full-right
+              = link_to 'Comment', new_article_comment_path(@article), :class => 'btn'
+  / end_of:Main hero unit for a primary marketing message or call to action
+  %hr
+/ /container
+%footer
+  %p.gras.full-right © Djengo 2012

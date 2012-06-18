@@ -1,0 +1,25 @@
+.container
+  .hero-unit
+    %h1 Listing articles
+    %hr
+      %table
+        %tr
+          %td
+            %strong Subject
+          %td
+            %strong Category
+          %td
+            %strong Posté le
+          %th
+        - @articles.each do |article|
+          %tr
+            %td.span6= link_to article.subject, article
+            %td.span5= link_to article.category, article
+            %td.span5= link_to article.time, article
+            %td.span5
+              \ #{link_to 'Show', article, :class => 'btn full-right'}
+      %hr
+        = link_to 'New Article', new_article_path, :class => 'btn full-right'
+  %hr
+%footer
+  %p © Djengo 2012
