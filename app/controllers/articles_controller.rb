@@ -19,6 +19,9 @@ class ArticlesController < ApplicationController
   # GET /articles/1.json
   def show
     @article = Article.find(params[:id])
+    @comment = @article.comments.build(params[:comment])
+    @comment.user = current_user
+    @comment.time = Time.new.to_s[0..15]
 
     @article_array = Comment.all
 

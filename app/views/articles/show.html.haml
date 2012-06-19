@@ -25,13 +25,27 @@
           %b.gras Time:
           = @article.time
       %hr
-        %div
+        #comments
           - @article_array.each do |comment|
             - if comment.article_id == @article.id
-              %p
-                %b.gras.gras2= User.find(comment.user_id).email
-                \ : #{comment.content}
+              = render comment
         %hr
+        
+        - remote_form_for [@article, @comment] do |f|
+          - if @comment.errors.any?
+            #error_explanation
+              %h2
+                = pluralize(@comment.errors.count, "error")
+                prohibited this comment from being saved:
+              %ul
+                - @comment.errors.full_messages.each do |msg|
+                  %li= msg
+          .field
+            %b Comment : 
+            = f.text_field :content
+          .actions
+            = f.submit
+
           %p
             = link_to 'Back', articles_path, :class => 'btn btn-primary'
             %span.full-right

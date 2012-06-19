@@ -1,0 +1,6 @@
+= div_for comment do
+  %p
+    %b.gras.gras2= comment.time
+    \-&nbsp;
+    %b.gras.gras2= User.find(comment.user_id).email
+    \ :&nbsp; #{comment.content}
