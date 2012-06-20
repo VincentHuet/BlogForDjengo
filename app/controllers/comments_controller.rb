@@ -44,6 +44,7 @@ class CommentsController < ApplicationController
   # POST /comments.json
   def create
     @article = Article.find(params[:article_id])
+    
     @comment = @article.comments.build(params[:comment])
     @comment.user = current_user
     @comment.time = Time.new.to_s[0..15]
@@ -51,12 +52,11 @@ class CommentsController < ApplicationController
     respond_to do |format|
       if @comment.save
         format.html { redirect_to @article }
-        format.json { render json: @comment, status: :created, location: @comment }
+        format.js
       else
         format.html { render action: "new" }
-        format.json { render json: @comment.errors, status: :unprocessable_entity }
+        format.js
       end
-      format.js
     end
   end
 

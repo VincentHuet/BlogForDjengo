@@ -23,7 +23,7 @@ class ArticlesController < ApplicationController
     @comment.user = current_user
     @comment.time = Time.new.to_s[0..15]
 
-    @article_array = Comment.all
+    @comments = Comment.all
 
     respond_to do |format|
       format.html # show.html.erb

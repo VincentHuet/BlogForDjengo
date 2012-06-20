@@ -1,6 +1,8 @@
-= div_for comment do
-  %p
-    %b.gras.gras2= comment.time
-    \-&nbsp;
-    %b.gras.gras2= User.find(comment.user_id).email
-    \ :&nbsp; #{comment.content}
+- @comments.each do |comment|
+    - if comment.article_id == @article.id
+		= div_for comment do
+		  %p
+		    %b.gras.gras2= comment.time
+		    \-&nbsp;
+		    %b.gras.gras2= User.find(comment.user_id).email
+		    \ :&nbsp; #{comment.content}
