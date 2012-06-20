@@ -1,0 +1,35 @@
+<div class="container">
+    <!-- Main hero unit for a primary marketing message or call to action -->
+    <div class="hero-unit-span8">
+      <h1>Listing articles</h1>
+      <hr>
+        <table>
+          <tr>
+            <td><strong>Subject</strong></td>
+            <td><strong>Category</strong></td>
+            <td><strong>Posté le </strong></td>
+            <!-- <th></th> -->
+          </tr>
+        <% @users.each do |user| %>
+          <tr>
+            <td class="span6"><%= link_to user.id, user %></td>
+            <td class="span6"><%= link_to user.email, user %></td>
+            <td class="span5"><%= link_to user.password, user %></td>
+            <!-- <td class="span5">&nbsp;<%= link_to 'Show', article %></td> -->
+            <!-- <td><%= link_to 'Edit', edit_article_path(article), :class => 'btn btn-primary btn-large'%></td>
+            <td><%= link_to 'Destroy', article, confirm: 'Are you sure?', method: :delete, :class => 'btn'  %> -->
+          </tr>
+        <% end %>
+        </table>
+        <hr>
+          <%= link_to 'New Article', new_article_path, :class => 'btn full-right' %>
+        <br />
+        
+    </div>
+    <!-- end_of:Main hero unit for a primary marketing message or call to action -->
+  <hr>
+</div> <!-- /container -->
+
+<footer>
+    <p>&copy; Djengo 2012</p>
+</footer>

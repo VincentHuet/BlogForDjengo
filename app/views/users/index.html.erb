@@ -1,29 +1,36 @@
-<h1>Listing articles</h1>
+<div class="container">
+    <!-- Main hero unit for a primary marketing message or call to action -->
+    <div class="hero-unit-span8">
+      <h1>Listing users</h1>
+      <hr>
+        <table>
+          <tr>
+            <td><strong>Subject</strong></td>
+            <td><strong>Category</strong></td>
+            <td><strong>Posté le </strong></td>
+            <!-- <th></th> -->
+          </tr>
+        <% @users.each do |user| %>
+          <tr>
+            <td class="span6"><%= link_to user.id, user %></td>
+            <td class="span6"><%= link_to user.email, user %></td>
+            <td class="span5"><%= link_to user.password, user %></td>
+          </tr>
+        <% end %>
+        </table>
+        <hr>
+        <hr>
+        <a href=""><%= current_user.id %></a>
+        <hr>
+        <hr>
+          <%= link_to 'New Article', new_user_registration_path, :class => 'btn full-right' %>
+        <br />
+        
+    </div>
+    <!-- end_of:Main hero unit for a primary marketing message or call to action -->
+  <hr>
+</div> <!-- /container -->
 
-<table>
-  <tr>
-    <th>Time</th>
-    <th>Category</th>
-    <th>Subject</th>
-    <th>Content</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @users.each do |user| %>
-  <tr>
-    <td><%= user.time %></td>
-    <td><%= user.category %></td>
-    <td><%= user.subject %></td>
-    <td><%= user.content %></td>
-    <td><%= link_to 'Show', user %></td>
-    <td><%= link_to 'Edit', edit_article_path(user) %></td>
-    <td><%= link_to 'Destroy', user, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Article', new_article_path %>
+<footer>
+    <p>&copy; Djengo 2012</p>
+</footer>

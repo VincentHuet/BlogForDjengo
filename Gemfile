@@ -13,6 +13,8 @@ gem 'sqlite3'
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
+  gem 'twitter-bootstrap-rails'
+  gem 'less-rails-fontawesome'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
@@ -20,11 +22,17 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+group :developement do
+	gem 'annotate', :git => 'git://github.com/ctran/annotate_models.git'
+	gem "haml-rails", ">= 0.3.4"
+end
+
 gem 'jquery-rails'
 gem 'devise'
 gem 'cancan'
-gem 'less-rails-bootstrap'
-gem 'less-rails','> 2.0.0'
+
+gem 'haml'
+
 gem 'therubyracer', :require => 'v8'
 
 # To use ActiveModel has_secure_password

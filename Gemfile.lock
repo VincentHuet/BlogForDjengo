@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/ctran/annotate_models.git
+  revision: bef0c494956e516540b7a9e72fa03be6576031dd
+  specs:
+    annotate (2.5.0.pre1)
+      rake
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -48,6 +55,12 @@ GEM
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    haml (3.1.6)
+    haml-rails (0.3.4)
+      actionpack (~> 3.0)
+      activesupport (~> 3.0)
+      haml (~> 3.0)
+      railties (~> 3.0)
     hike (1.2.1)
     i18n (0.6.0)
     journey (1.0.3)
@@ -60,8 +73,9 @@ GEM
     less-rails (2.2.3)
       actionpack (>= 3.1)
       less (~> 2.2.0)
-    less-rails-bootstrap (2.0.13)
-      less-rails (~> 2.2.0)
+    less-rails-fontawesome (0.2.1)
+      less-rails (>= 2.1.7)
+      railties (>= 3.1.1)
     libv8 (3.3.10.4)
     mail (2.4.4)
       i18n (>= 0.4.0)
@@ -113,6 +127,11 @@ GEM
     treetop (1.4.10)
       polyglot
       polyglot (>= 0.3.1)
+    twitter-bootstrap-rails (2.1.0)
+      actionpack (>= 3.1)
+      less-rails (~> 2.2.2)
+      railties (>= 3.1)
+      therubyracer (~> 0.10.1)
     tzinfo (0.3.33)
     uglifier (1.2.4)
       execjs (>= 0.3.0)
@@ -124,14 +143,17 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  annotate!
   cancan
   coffee-rails (~> 3.2.1)
   devise
+  haml
+  haml-rails (>= 0.3.4)
   jquery-rails
-  less-rails (> 2.0.0)
-  less-rails-bootstrap
+  less-rails-fontawesome
   rails (= 3.2.5)
   sass-rails (~> 3.2.3)
   sqlite3
   therubyracer
+  twitter-bootstrap-rails
   uglifier (>= 1.0.3)

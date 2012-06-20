@@ -1,5 +1,9 @@
 
 class ArticlesController < ApplicationController
+  protect_from_forgery
+
+  before_filter :authenticate_user!
+
   # GET /articles
   # GET /articles.json
   def index
@@ -15,6 +19,11 @@ class ArticlesController < ApplicationController
   # GET /articles/1.json
   def show
     @article = Article.find(params[:id])
+    @comment = @article.comments.build(params[:comment])
+    @comment.user = current_user
+    @comment.time = Time.new.to_s[0..15]
+
+    @comments = Comment.all
 
     respond_to do |format|
       format.html # show.html.erb
@@ -25,7 +34,9 @@ class ArticlesController < ApplicationController
   # GET /articles/new
   # GET /articles/new.json
   def new
-    @article = Article.new
+    @article = current_user.articles.build(params[:article])
+
+    @article.time = Time.now
 
     respond_to do |format|
       format.html # new.html.erb
@@ -35,17 +46,18 @@ class ArticlesController < ApplicationController
 
   # GET /articles/1/edit
   def edit
-    @article = Article.find(params[:id])
+    @article = current_user.articles.find(params[:id])
   end
 
   # POST /articles
   # POST /articles.json
   def create
-    @article = Article.new(params[:article])
+    @article = current_user.articles.build(params[:article])
+    
 
     respond_to do |format|
       if @article.save
-        format.html { redirect_to @article, notice: 'Article was successfully created.' }
+        format.html { redirect_to articles_path }
         format.json { render json: @article, status: :created, location: @article }
       else
         format.html { render action: "new" }
@@ -57,7 +69,7 @@ class ArticlesController < ApplicationController
   # PUT /articles/1
   # PUT /articles/1.json
   def update
-    @article = Article.find(params[:id])
+    @article = current_user.articles.find(params[:id])
 
     respond_to do |format|
       if @article.update_attributes(params[:article])
@@ -73,7 +85,7 @@ class ArticlesController < ApplicationController
   # DELETE /articles/1
   # DELETE /articles/1.json
   def destroy
-    @article = Article.find(params[:id])
+    @article = current_user.articles.find(params[:id])
     @article.destroy
 
     respond_to do |format|

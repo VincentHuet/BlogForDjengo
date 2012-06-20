@@ -1,5 +1,29 @@
-<h1>Blog#index</h1>
-<p>Find me in app/views/blog/index.html.erb</p>
-<a class="btn" href="/users/sign_out" data-method="delete" rel="nofollow">Logout</a>
-	
-# <%= link_to "Log out", destroy_user_session_path, :method => :delete %>
+<div class="container">
+
+  <!-- Main hero unit for a primary marketing message or call to action -->
+  <div class="hero-unit">
+    <table>
+      <tr>
+        <td>
+          <h2>Bonjour, </h2>
+          <p>
+            <h1>Vous vous trouvez sur le blog de Djengo<br /><br /> 
+            Retrouvez y tout vos messages et le commentaires de vos amis.</h1>
+          </p>
+        </td>
+        <td>
+          <%= link_to image_tag("screen-shot.png"), articles_path, :class => 'blog-image' %>
+        </td>
+      </tr>
+      <hr>
+    </table>
+  </div>
+  <hr>
+</div> <!-- /container -->
+
+<footer>
+  <p>&copy; Djengo 2012</p>
+</footer>
+
+
+		 

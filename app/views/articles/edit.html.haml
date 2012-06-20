@@ -1,0 +1,14 @@
+.container
+  / Main hero unit for a primary marketing message or call to action
+  .hero-unit
+    .540
+      %h1 Editing article
+      = render 'form'
+      = link_to 'Show', @article
+      |
+      \#{link_to 'Back', articles_path}
+  / end_of:Main hero unit for a primary marketing message or call to action
+  %hr
+/ /container
+%footer
+  %p © Djengo 2012

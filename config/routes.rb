@@ -1,13 +1,26 @@
 BlogForDjengo::Application.routes.draw do
   
+  resources :comments
+
   devise_for :users
   
-  root :to => 'articles#index'
+  root :to => 'blog#index'
 
   resources :users
   
   resources :articles
 
+  resources :informations, :only => [] do
+    collection do
+      get 'aboutus'
+      get 'equipe'
+      get 'aboutus_more'
+    end
+  end
+
+  resources :articles do
+    resources :comments
+  end
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

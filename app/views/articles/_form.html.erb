@@ -10,21 +10,27 @@
       </ul>
     </div>
   <% end %>
-
   <div class="field">
-    <%= f.label :time %><br />
-    <%= f.text_field :time %>
-  </div>
-  <div class="field">
-    <%= f.label :category %><br />
-    <%= f.text_field :category %>
-  </div>
-  <div class="field">
-    <%= f.label :subject %><br />
+    <%= f.label :subject, unique: true %>
     <%= f.text_field :subject %>
   </div>
   <div class="field">
-    <%= f.label :content %><br />
+    <%= f.label :category %>
+    <!-- <input type="text" name="category" id="category" liste="category">
+    <datalist id="category">
+      <% @article_array = Article.all %>   
+      <% @article_array.each do |article| %>
+        <option value="<%= article.category %>">
+      <% end %>
+    </datalist> -->
+    <%= f.text_field :category %>
+  </div>
+  <div class="field">
+    <%= f.label :time %>
+    <%= f.text_field :time, :value => Time.new.to_s[0..15] %>
+  </div>
+  <div class="field">
+    <%= f.label :content %>
     <%= f.text_area :content, :rows => 3 %>
   </div>
   <div class="actions">
