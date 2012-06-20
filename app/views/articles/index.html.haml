@@ -15,7 +15,7 @@
           %tr
             %td.span6= link_to article.subject, article
             %td.span5= link_to article.category, article
-            %td.span5= link_to article.time, article
+            %td.span5= link_to article.time.to_formatted_s(:short), article
             %td.span5
               \ #{link_to 'Show', article, :class => 'btn full-right'}
       %hr

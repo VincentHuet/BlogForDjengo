@@ -36,7 +36,7 @@ class ArticlesController < ApplicationController
   def new
     @article = current_user.articles.build(params[:article])
 
-
+    @article.time = Time.now
 
     respond_to do |format|
       format.html # new.html.erb

@@ -47,7 +47,7 @@ class CommentsController < ApplicationController
     
     @comment = @article.comments.build(params[:comment])
     @comment.user = current_user
-    @comment.time = Time.new.to_s[0..15]
+    @comment.time = Time.now
     
     respond_to do |format|
       if @comment.save
