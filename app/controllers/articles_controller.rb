@@ -21,7 +21,7 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
     @comment = @article.comments.build(params[:comment])
     @comment.user = current_user
-    @comment.time = Time.new.to_s[0..15]
+    @comment.time = Time.now
 
     @comments = Comment.all
 
