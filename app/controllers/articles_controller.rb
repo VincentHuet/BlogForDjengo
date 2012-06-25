@@ -4,6 +4,16 @@ class ArticlesController < ApplicationController
 
   before_filter :authenticate_user!
 
+  before_filter :set_locale
+ 
+  def set_locale
+    I18n.locale = params[:locale] || I18n.default_locale
+  end
+
+  before_filter :find_article, :only => [:edit, :update, :destroy]
+
+
+
   # GET /articles
   # GET /articles.json
   def index
@@ -23,7 +33,7 @@ class ArticlesController < ApplicationController
     @comment.user = current_user
     @comment.time = Time.now
 
-    @comments = Comment.all
+    @comments = @article.comments
 
     respond_to do |format|
       format.html # show.html.erb
@@ -46,21 +56,18 @@ class ArticlesController < ApplicationController
 
   # GET /articles/1/edit
   def edit
-    @article = current_user.articles.find(params[:id])
   end
 
   # POST /articles
   # POST /articles.json
   def create
     @article = current_user.articles.build(params[:article])
-    
-
     respond_to do |format|
       if @article.save
         format.html { redirect_to articles_path }
         format.json { render json: @article, status: :created, location: @article }
       else
-        format.html { render action: "new" }
+        format.html { render 'new' }
         format.json { render json: @article.errors, status: :unprocessable_entity }
       end
     end
@@ -69,14 +76,12 @@ class ArticlesController < ApplicationController
   # PUT /articles/1
   # PUT /articles/1.json
   def update
-    @article = current_user.articles.find(params[:id])
-
     respond_to do |format|
       if @article.update_attributes(params[:article])
         format.html { redirect_to @article, notice: 'Article was successfully updated.' }
         format.json { head :no_content }
       else
-        format.html { render action: "edit" }
+        format.html { render 'edit' }
         format.json { render json: @article.errors, status: :unprocessable_entity }
       end
     end
@@ -85,12 +90,16 @@ class ArticlesController < ApplicationController
   # DELETE /articles/1
   # DELETE /articles/1.json
   def destroy
-    @article = current_user.articles.find(params[:id])
     @article.destroy
-
     respond_to do |format|
       format.html { redirect_to articles_url }
       format.json { head :no_content }
     end
   end
+
+protected
+  def find_article
+    @article = current_user.articles.find(params[:id])
+  end
+
 end

@@ -1,6 +1,7 @@
 = div_for comment do
   %p
-    %b.gras.gras2= comment.time
+    %b.strong1.strong12= l(comment.time)
     \-&nbsp;
-    %b.gras.gras2= User.find(comment.user_id).email
-    \ :&nbsp; #{comment.content}
+    %b.strong1.strong12= comment.user_email
+    \ :&nbsp; #{comment.content} &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+    %b.strong1.strong12= distance_of_time_in_words_to_now(comment.time)

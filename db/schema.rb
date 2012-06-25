@@ -49,5 +49,7 @@ ActiveRecord::Schema.define(:version => 20120620133903) do
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
-
+  add_index "articles", "user_id"
+  add_index "comments", "article_id"
+  add_index "comments", "user_id"
 end

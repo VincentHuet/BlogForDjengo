@@ -22,4 +22,5 @@ class Article < ActiveRecord::Base
   validates :subject, :presence => true
   validates :time, :presence => true
 
+  delegate :email, :to => :user, :prefix => true
 end

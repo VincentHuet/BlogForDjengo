@@ -15,10 +15,11 @@ class Comment < ActiveRecord::Base
   attr_accessible :article_id, :content, :time, :user_id
 
   validates :article_id, :presence => true
-  validates :content, :presence => true 
-  validates :time, :presence => true  
+  validates :content, :presence => true
+  validates :time, :presence => true
   validates :user_id, :presence => true
 
   belongs_to :user
   belongs_to :article
+  delegate :email, :to => :user, :prefix => true
 end

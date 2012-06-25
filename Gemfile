@@ -27,6 +27,7 @@ group :developement do
 	gem "haml-rails", ">= 0.3.4"
 end
 
+gem "rails_best_practices"
 gem 'jquery-rails'
 gem 'devise'
 gem 'cancan'
@@ -34,6 +35,8 @@ gem 'cancan'
 gem 'haml'
 
 gem 'therubyracer', :require => 'v8'
+
+gem 'i18n'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

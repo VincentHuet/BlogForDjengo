@@ -1,11 +1,11 @@
-= form_for(@article) do |f|
-  - if @article.errors.any?
+= form_for(article) do |f|
+  - if article.errors.any?
     #error_explanation
       %h2
-        = pluralize(@article.errors.count, "error")
+        = pluralize(article.errors.count, "error")
         prohibited this article from being saved:
       %ul
-        - @article.errors.full_messages.each do |msg|
+        - article.errors.full_messages.each do |msg|
           %li= msg
   .field
     = f.label :subject, unique: true
@@ -14,10 +14,10 @@
     = f.label :category
     = f.select(:category, Article.all.collect {|p| [ p.category, p.category ] }, { :include_blank => false })
   .field
-    = f.label :time
-    = f.date_select :time
+    = f.label 'Date et heure de publication :'
+    = f.datetime_select :time
   .field
     = f.label :content
     = f.text_area :content, :rows => 3
   .actions
-    = f.submit
+    = t f.submit
