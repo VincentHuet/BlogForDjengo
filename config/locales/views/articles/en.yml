@@ -2,13 +2,24 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  index:
-    show: View details »
-    new_article: Post a new article
-    subject: Subject
-    category: Category
-    posted: Posted on
-    article_list: Article List
-  show:
-    comment: Comment
-    back: Back
+  articles:
+    index:
+      show: "View details »"
+      subject: "Subject"
+      cattegory: "Catragory"
+      posted: "Posted on"
+      new_article: "Post a new article"
+      article_list: "Article List"
+      article_quantity:
+        zero: "There is no article in the database"
+        one: "There is one article in the database"
+        other: "There is %{count} articles in the database"
+    show:
+      comment: "Comment"
+      back: "Back"
+      comment_quantity:
+        zero: "There is no relative comment in the database"
+        one: "There is one relative comment in the database. It is the one which follows :"
+        other: "There is %{count} relative comments in the database. They are the following"
+    new:
+      new_article: "Post a new article"

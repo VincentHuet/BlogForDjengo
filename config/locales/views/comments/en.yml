@@ -2,3 +2,8 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
+  comments:
+    new:
+      new_comment: "New comment :"
+      back: "Back"
+

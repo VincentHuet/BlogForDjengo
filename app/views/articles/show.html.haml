@@ -27,6 +27,8 @@
           %b.strong1
             = l(@article.time)
       %hr
+      %strong= t('.comment_quantity', :count => @comments.count)
+      %hr
         #comments
           - @comments.each do |comment|
             = render comment

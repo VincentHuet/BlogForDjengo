@@ -12,7 +12,7 @@ en:
     - Fri
     - Sat
     abbr_month_names:
-    -
+    - ~
     - Jan
     - Feb
     - Mar
@@ -197,7 +197,6 @@ en:
   time:
     am: am
     formats:
-      # default: ! '%a, %d %b %Y %H:%M'
       default: ! '%d %B %Y at %H:%M'
       long: ! '%B %d, %Y %H:%M'
       short: ! '%d %b %H:%M'

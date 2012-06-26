@@ -2,7 +2,12 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  category: "Category"
-  content: "Content"
-  subject: "Subject"
-  time: "Posted on"
+  activerecord:
+    models:
+      article: "article"
+    attributes:
+      article:
+        category: "Category"
+        content: "Content"
+        subject: "Subject"
+        time: "Posted on"

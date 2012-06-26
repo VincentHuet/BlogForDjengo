@@ -1,24 +1,24 @@
 .container
   .hero-unit
-    %h1= t('.article_list')
+    %h2= t('.article_quantity', :count => 15) + ", et voici leur liste :"
     %hr
       %table
         %tr
           %td
-            %strong= t '.subject'  + ":"
+            %strong= t('.subject') + ":"
           %td
-            %strong= t '.category' + ":"
+            %strong= t('.category') + ":"
           %td
-            %strong= t '.posted' + ":"
+            %strong= t('.posted') + ":"
           %th
         - @articles.each do |article|
           %tr
             %td.span9= link_to article.subject, article
             %td.span5= link_to article.category, article
             %td.span5= link_to l(article.time), article
-            %td.span5= link_to t '.show'  , article, :class => 'btn full-right'
+            %td.span5= link_to t('.show')  , article, :class => 'btn full-right'
       %hr
-        = link_to t '.new_article' , new_article_path, :class => 'btn full-right'
+        = link_to t('.new_article') , new_article_path, :class => 'btn full-right'
   %hr
 %footer
   %p © Djengo 2012
