@@ -1,0 +1,14 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+fr:
+  index:
+    show: Plus de détails »
+    new_article: Ecrire un nouvel article
+    subject: Sujet
+    category: Catégorie
+    posted: Posté le
+    article_list: Liste des sujets
+  show:
+    back: Retour
+    comment: Commenter

@@ -41,14 +41,14 @@
                 - @comment.errors.full_messages.each do |msg|
                   %li= msg
           .field
-            %b Comment :
+            %b= t(:comment) + ":"
             = f.text_field :content
           .actions
             = f.submit
           %p
-            = link_to t(:back) , articles_path, :class => 'btn btn-primary'
+            = link_to t('.back') , articles_path, :class => 'btn btn-primary'
             %span.full-right
-              = link_to t(:comment), new_article_comment_path(@article), :class => 'btn'
+              = link_to t('.comment'), new_article_comment_path(@article), :class => 'btn'
   / end_of:Main hero unit for a primary marketing message or call to action
   %hr
 / /container

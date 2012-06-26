@@ -51,8 +51,8 @@ class CommentsController < ApplicationController
     respond_to do |format|
       if @comment.save
         # format.html { redirect_to @article }
-        format.json { render json: @comment }
-        # format.js
+        #format.json { render json: @comment }
+        format.js
       else
         format.js
       end

@@ -7,32 +7,6 @@
 # Emended by Benjamin des Gachons and Patrick Chew : <http://www.fitima.org/docs/fiche.pdf>
 
 fr:
-  Bonjour: Bonjour
-  Welcome_paragraphe: Vous vous trouvez sur le blog de Djengo
-  welcome_paragraphe_2: Retrouvez y tous vos messages et le commentaires de vos amis.
-  home: Accueil
-  article: Articles
-  team: Equipe
-  about: A propos de djengo
-  logout: Déconnexion
-  login: Connexion
-  sing_up: Inscription
-  show: Plus de détails »
-  new_article: Ecrire un nouvel article
-  subject: Sujet
-  category: Catégorie
-  posted: Posté le
-  article_list: Liste des sujets
-  more_about_us: En apprendre plus sur nous »
-  about_us_p1: Djengo, c’est l’histoire de 4 jeunes diplômés entrepreneurs qui pensent encore pouvoir changer le monde. Rêve ou réalité ?
-  about_us_p2: Il s’agit d’une start-up web innovante favorisant le covoiturage pour les petites et moyennes distances. Grâce à djengo, vous pouvez désormais réserver votre trajet en quelques secondes.
-  about_us_p3: Avant d’aller plus loin, il est amusant de s’interroger sur la signification de “djengo”. Est-ce par assimilation au prénom de Django Reinhardt, virtuose et tsigane, et aux gens du voyage ? Ce nom nous est venu à l’esprit sans idée préconçue et nous ne pouvons plus nous en passer. D’ailleurs, si vous avez l’idée d’une explication rationnelle au nom qui pourrait justifier ce choix, communiquez là vous pourriez gagner le badge “créatif”
-  about_us_p4: Revenons à notre histoire. Il y a quelques mois, comme à son habitude, Guillaume faisait de l’autostop le long de la route. Par malchance ce jour-là, personne ne s’arrêta pour le charger, et cela malgré un nombre inimaginable de voitures, vides de passager.
-  about_us_p5: Quelque chose devait changer.
-  from: De
-  content: Contenu du message
-  comment: Commenter
-  back: Retour
   date:
     formats:
       default: "%d/%m/%Y"
