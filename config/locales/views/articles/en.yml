@@ -10,12 +10,21 @@ en:
       posted: "Posted on"
       new_article: "Post a new article"
       article_list: "Article List"
+      published_article_quantity:
+        zero: "There is no published article in the database"
+        one: "There is one published article in the database"
+        other: "There is %{count} published articles in the database"
       article_quantity:
         zero: "There is no article in the database"
         one: "There is one article in the database"
         other: "There is %{count} articles in the database"
     show:
-      comment: "Comment"
+      comment: "Commenter"
+      subject: "Subject"
+      from: "From"
+      category: "Category"
+      content: "Content"
+      comments: "Comments"
       back: "Back"
       comment_quantity:
         zero: "There is no relative comment in the database"

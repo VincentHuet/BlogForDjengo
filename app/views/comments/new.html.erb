@@ -3,7 +3,7 @@
     <div class="hero-unit">
         <h1><%= t(".new_comment") %></h1>
         <%= render 'form' %>
-        <%= link_to t('.back'), comments_path, :class => 'btn full-right' %>
+        <%= link_to t('.back'), article_path(@article), :class => 'btn full-right' %>
     </div>
     <!-- end_of:Main hero unit for a primary marketing message or call to action -->
   <hr>

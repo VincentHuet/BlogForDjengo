@@ -10,6 +10,10 @@ fr:
       category: "Catégorie"
       posted: "Posté le"
       article_list: "Liste des sujets"
+      published_article_quantity:
+        zero: "Il n'y a pas d'articles publiés dans la base de donnée"
+        one: "Il y a un article publié dans la base de donnée"
+        other: "Il y a %{count} articles publiés dans la base de donnée"
       article_quantity:
         zero: "Il n'y a pas d'articles dans la base de donnée"
         one: "Il y a un article dans la base de donnée"
@@ -17,6 +21,11 @@ fr:
     show:
       back: "Retour"
       comment: "Commenter"
+      subject: "Sujet"
+      from: "De"
+      category: "Catégorie"
+      content: "Contenu"
+      comments: "Commentaires"
       comment_quantity:
         zero: "Il n'y a pas de commentaires associés dans la base de donnée"
         one: "Il y a un commentaire associé dans la base de donnée. Le voici :"

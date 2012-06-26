@@ -19,7 +19,9 @@ class ArticlesController < ApplicationController
   def index
     @articles = Article.all
 
-    @article_quantity = Article.count
+    @published_article_quantity = 0
+    @article_quantity = @articles.count
+
 
     respond_to do |format|
       format.html # index.html.erb
