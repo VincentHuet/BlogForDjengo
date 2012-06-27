@@ -8,5 +8,6 @@ class CreateArticles < ActiveRecord::Migration
 
       t.timestamps
     end
+    add_index :articles, :user_id
   end
 end

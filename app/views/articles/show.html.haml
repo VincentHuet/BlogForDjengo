@@ -4,31 +4,35 @@
     %p#notice= notice
     %p
       %span
-        %b.gras Subject:
+        %b.strong1= t('.subject') + ":"
         = @article.subject
       - if current_user.id == @article.user_id
         %span.full-right
           = link_to 'Edit', edit_article_path(@article), :class => 'btn  btn-primary'
           = link_to 'Destroy', @article,  :class => 'btn btn-warning', confirm: 'Are you sure?', method: :delete
     %p
-      %b.gras From:
-      = User.find(@article.user_id).email
+      %b.strong1= t('.from') + ":"
+      = @article.user_email
     %p
-      %b.gras Category:
+      %b.strong1= t('.category') + ":"
       = @article.category
     %hr
       %p
-        %b.gras Content:
+        %b.strong1= t('.content') + ":"
+        %br
+        %br
         = @article.content
       %p
         %span.full-right
-          %b.gras Time:
-          = @article.time
+          %b.strong1
+            = l(@article.time)
+      %hr
+      %strong= t('.comment_quantity', :count => @comments.count)
       %hr
         #comments
-          = render @comments
+          - @comments.each do |comment|
+            = render comment
         %hr
-        
         = form_for @comment, :url => article_comments_path(@article), :remote => true do |f|
           - if @comment.errors.any?
             #error_explanation
@@ -39,17 +43,16 @@
                 - @comment.errors.full_messages.each do |msg|
                   %li= msg
           .field
-            %b Comment : 
+            %b= t('.comments') + ":"
             = f.text_field :content
           .actions
             = f.submit
-
           %p
-            = link_to 'Back', articles_path, :class => 'btn btn-primary'
+            = link_to t('.back') , articles_path, :class => 'btn btn-primary'
             %span.full-right
-              = link_to 'Comment', new_article_comment_path(@article), :class => 'btn'
+              = link_to t('.comment'), new_article_comment_path(@article), :class => 'btn'
   / end_of:Main hero unit for a primary marketing message or call to action
   %hr
 / /container
 %footer
-  %p.gras.full-right © Djengo 2012
+  %p.strong1.full-right © Djengo 2012

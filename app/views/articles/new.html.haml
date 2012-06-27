@@ -2,11 +2,9 @@
   .span8
     / Main hero unit for a primary marketing message or call to action
     .hero-unit
-      %h1 New article
+      %h1= t('.new_article')
       = render 'form'
       = link_to 'Back', articles_path
-      / end_of:Main hero unit for a primary marketing message or call to action
     %hr
-  / /container
   %footer
     %p © Djengo 2012

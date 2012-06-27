@@ -1,26 +1,29 @@
 BlogForDjengo::Application.routes.draw do
-  
-  resources :comments
 
-  devise_for :users
-  
-  root :to => 'blog#index'
+  # devise_for :users
 
-  resources :users
-  
-  resources :articles
+  scope '(:locale)' do
+    devise_for :users
 
-  resources :informations, :only => [] do
-    collection do
-      get 'aboutus'
-      get 'equipe'
-      get 'aboutus_more'
+    resources :users
+
+    resources :articles do
+      resources :comments
+    end
+
+    resources :comments
+
+    resources :informations do
+      collection do
+        get 'aboutus'
+        get 'equipe'
+        get 'aboutus_more'
+      end
     end
   end
+  root :to => 'blog#index'
+end
 
-  resources :articles do
-    resources :comments
-  end
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -76,4 +79,3 @@ BlogForDjengo::Application.routes.draw do
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
-end

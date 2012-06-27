@@ -1,25 +1,29 @@
 .container
   .hero-unit
-    %h1 Listing articles
+    - @articles.each do |article_published_or_not|
+      - if article_published_or_not.time < Time.now
+        - @published_article_quantity += 1
+    %h2= t('.article_quantity', :count => @article_quantity)
+    %h2= "Cependant, " + t('.published_article_quantity', :count => @published_article_quantity) + ", et voici leur liste :"
     %hr
       %table
         %tr
           %td
-            %strong Subject
+            %strong= t('.subject') + ":"
           %td
-            %strong Category
+            %strong= t('.category') + ":"
           %td
-            %strong Posté le
+            %strong= t('.posted') + ":"
           %th
         - @articles.each do |article|
-          %tr
-            %td.span6= link_to article.subject, article
-            %td.span5= link_to article.category, article
-            %td.span5= link_to article.time.to_formatted_s(:short), article
-            %td.span5
-              \ #{link_to 'Show', article, :class => 'btn full-right'}
+          - if article.time < Time.now
+            %tr
+              %td.span9= link_to article.subject, article
+              %td.span5= link_to article.category, article
+              %td.span5= link_to l(article.time), article
+              %td.span5= link_to t('.show')  , article, :class => 'btn full-right'
       %hr
-        = link_to 'New Article', new_article_path, :class => 'btn full-right'
+        = link_to t('.new_article') , new_article_path, :class => 'btn full-right'
   %hr
 %footer
   %p © Djengo 2012

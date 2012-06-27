@@ -1,0 +1,45 @@
+.container
+  / Main hero unit for a primary marketing message or call to action
+  .hero-unit
+    %h1= t('.about')
+    %br/
+    / <div class="hero-unit-small-paragraph">
+    %p= t('.about_us_html')
+    %p.full-right= link_to t('.more_about_us'), 'aboutus_more', :class => 'btn'
+  %hr
+    .hero-unit-bottom
+      %h1= t(:team)
+      %hr
+        / Example row of columns
+        .row
+          .equipe-short
+            %h3 Tanguy
+            %p c’est le stéréotype de l’entrepreneur stressé mais ultra motivé. Un vrai « networker » qui agrandit sans cesse son réseau. Lorsque vous lui présentez un projet, il voit directement qui pourrait vous aider ou quels sont vos concurrents....
+          .equipe-short
+            %h3 David
+            %p
+              c’est le gars posé toujours de bonne humeur. Passionné par l’informatique et les systèmes de réseaux, il crée nos algorithmes. En dehors de cela, il prend soin de son corps en faisant du sport quotidiennement....
+        .row
+          .span5
+            %a.btn.full-right{:href => "#"}= t('.show')
+          .span5
+            %a.btn.full-right{:href => "#"}= t('.show')
+        %br
+          .row
+            .equipe-short
+              %h3 Anissia
+              %p
+                c’est la fille du groupe, celle qui a du caractère à revendre et qui ne passe jamais à côté d’un détail. Elle est l’arme de communication de Djengo...
+            .equipe-short
+              %h3 Guillaume
+              %p
+                c’est le visionnaire qui vous enchante sans cesse et vous incite à vous surpasser. Il est passionné par l’innovation et la consommation collaborative. Sa vie d’entrepreneur est dédiée à l’utilisation des nouvelles technologies pour la création d’outils aidant les communautés à s’organiser...
+          .row
+            .span5
+              %a.btn.full-right{:href => "#"}= t('.show')
+            .span5
+              %a.btn.full-right{:href => "#"}= t('.show')
+/ /container
+%hr
+  %footer
+    %p © Djengo 2012

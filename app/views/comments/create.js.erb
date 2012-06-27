@@ -1,6 +1,6 @@
 <% if @comment.new_record? %>
-	$('input#comments').effect('highlight', { color: 'red' });
+    $('input#comments').effect('highlight', { color: 'red' });
 <% else %>
-	$('div#comments').append("<%= escape_javascript(render @comment) %>");
-	$('div#<%= dom_id(@comment) %>').effect('highlight');
+    $('div#comments').append("<%= escape_javascript(render @comment) %>");
+    $('div#<%= dom_id(@comment) %>').effect('highlight');
 <% end %>

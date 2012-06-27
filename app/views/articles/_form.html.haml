@@ -15,9 +15,9 @@
     = f.select(:category, Article.all.collect {|p| [ p.category, p.category ] }, { :include_blank => false })
   .field
     = f.label :time
-    = f.date_select :time
+    = f.datetime_select :time
   .field
     = f.label :content
     = f.text_area :content, :rows => 3
   .actions
-    = f.submit
+    = t f.submit
